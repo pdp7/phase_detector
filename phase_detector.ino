@@ -2,7 +2,6 @@
 // BegOscopio tutorial: https://www.instructables.com/id/Oscilloscope-Arduino-Processing/
 // BegOscopio source code: https://github.com/rogeriobego/oscilloscope-arduino-processing
 #define versao "v1.5"
-#include <TimerOne.h>
 
 /**************************************************************************
    The Adafruit_GFX and ST7735 TFT LCD code is from Adafruit library
@@ -66,7 +65,7 @@ int out_of_phase_led = 2;
 // Note: Each period is 20 ms since for 50 Hz signal. detecthInPhase() samples
 // ch0 and ch1 over 2 periods which is 40 ms.
 // The current setting of 25 results in 1 seconds (40 ms * 25)
-int steady_state_phase_threshold = 25;
+int steady_state_phase_threshold = 50;
 
 // count the number of successive periods
 // where the phase did not change
